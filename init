@@ -1,0 +1,26 @@
+#!sh
+#########################################################################################################
+# initrd$ find . | cpio -o -H newc | gzip > /tmp/test.cpio.gz                                           #
+# qemu-system-x86_64 -kernel /boot/vmlinuz-2.6.32-25-generic -hda 1gbfile -initrd /tmp/test.cpio.gz     #
+#########################################################################################################
+
+busybox mkdir proc hd
+
+busybox mount -t proc proc proc
+
+busybox mknod dev/sda b 8 0
+
+busybox mount -t ext3 dev/sda hd
+
+busybox mkdir hd1
+
+busybox mknod dev/loop0 b 7 0
+
+busybox mount -t ext3 -oloop hd/512mbfile hd1
+
+busybox mknod hd1/dev/tty1 c 4 1
+busybox mknod hd1/dev/tty2 c 4 2
+busybox mknod hd1/dev/tty3 c 4 3
+busybox mknod hd1/dev/tty4 c 4 4
+
+exec busybox chroot hd1 /sbin/init
