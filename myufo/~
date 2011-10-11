@@ -1,0 +1,28 @@
+fp = file('/tmp/log', 'w+')
+
+def log(msg):
+    fp.write(msg)
+    fp.write('\n')
+
+def print_callstack():
+    try:
+        for i in range(20):
+            log(sys._getframe(i).f_code.co_filename + ': ' +\
+                sys._getframe(i).f_code.co_name + '\n')
+            log(sys._getframe(i).f_code.co_filename + ': ' +\
+                sys._getframe(i).f_code.co_name + '\n')
+    except ValueError:
+        log('------------------------')
+
+class Application():
+    def __init__(self, conf):
+        pass
+    def __call__(self, env, start_response):
+        log(str(env))
+
+
+def app_factory(global_conf, **local_conf):
+    """paste.deploy app factory for creating WSGI proxy apps."""
+    conf = global_conf.copy()
+    conf.update(local_conf)
+    return Application(conf)

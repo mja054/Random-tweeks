@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+import os
+
+# spawn a proxy server process
+fp = file('/tmp/log', 'a+')
+
+fp.write('starting the proxy server')
+os.system('myufo-proxy-server /etc/myufo/proxy.conf')
+
