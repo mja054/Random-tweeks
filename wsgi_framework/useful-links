@@ -4,3 +4,24 @@ Learn_wsgi
         http://wsgi.org/wsgi/Learn_WSGI
   * Some startup wsgi code (helloworld type)
         http://www.rufuspollock.org/code/wsgi/
+
+Webob:
+  * webob's home address:
+      https://github.com/Pylons/webob
+
+  * what does webobs father has to say about it:
+      http://docs.webob.org/en/latest/do-it-yourself.html
+      http://docs.webob.org/en/latest/wiki-example.html
+
+Paste:
+  * Paste
+      http://pythonpaste.org/
+
+  * Paste Script
+      http://pythonpaste.org/script/
+
+  * Paste function Interface
+      http://pythonpaste.org/deploy/module-paste.deploy.interfaces.html
+
+  * Paste Deploy:
+      http://pythonpaste.org/deploy/
