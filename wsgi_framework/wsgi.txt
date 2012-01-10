@@ -1,0 +1,7 @@
+WSGI(Web Server Gateway Interface):
+
+It is a specification for web servers and application servers to communicate with web applications
+
+WSGI is an interface between web servers and web applications, it lets code pass around web requests in a fairly formal way. That’s the simplest summary, but there is more – WSGI lets you add annotation to the request, and adds some more metadata to the request.
+
+WSGI more specifically is made up of an application and a server. The application is a function that receives the request and produces the response. The server is the thing that calls the application function.
