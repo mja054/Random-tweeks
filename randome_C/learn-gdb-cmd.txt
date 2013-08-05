@@ -1,0 +1,3 @@
+start
+b pinto
+quit

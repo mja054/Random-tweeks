@@ -1,0 +1,9 @@
+
+
+
+
+
+
+* http://ehuss.com/shared/
+* ulrich drepper http://smilax.org/135/dsohowto.pdf
+* http://www.cprogramming.com/tutorial/shared-libraries-linux-gcc.html

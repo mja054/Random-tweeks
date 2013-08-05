@@ -8,7 +8,7 @@
 int
 main()
 {
-        struct timeval tv;
+        struct timeval tv = {0,};
 
         if (gettimeofday (&tv, NULL)) {
                 fprintf (stderr, "gettimeofday failed, %s\n", strerror (errno));
